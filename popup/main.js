@@ -15,6 +15,39 @@ $(document).ready(function () {
         "}\n" +
         "</style>");
     */
+
+    function bindEvent(element, eventName, eventHandler) {
+        if (element.addEventListener){
+            element.addEventListener(eventName, eventHandler, false);
+        } else if (element.attachEvent) {
+            element.attachEvent('on' + eventName, eventHandler);
+        }
+    }
+
+    bindEvent(window, 'message', function (e) {
+        console.log(e.data);
+        if (e.data == 'fontme') {
+            function onExecuted(result) {
+                // console.log(`done`);
+                return true;
+            }
+
+            function onError(error) {
+                console.log(`Error: ${error}`);
+            }
+
+            var doFontStuff = 'var elem = document.createElement("link");' +
+                'elem.href = "https://cuneiphrase.xyz/fonts/font.css";' +
+                'elem.rel = "stylesheet";' +
+                'elem.type = "text/css";' +
+                'document.head.appendChild(elem);';
+
+            var executing = browser.tabs.executeScript({
+                code: doFontStuff
+            });
+        }
+    });
+
     browser.tabs.query({active: true, currentWindow: true}).then(function (tabs) {
         //'tabs' will be an array with only one element: an Object describing the active tab
         //  in the current window.
