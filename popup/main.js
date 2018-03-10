@@ -25,6 +25,15 @@ $(document).ready(function () {
             id: 'myFrame',
             frameborder: 0
         }).appendTo('#main_div');
+
+        $('#main_div').append('<button type="button" id="showAdd">Add new link</button>');
+
+        $("#showAdd").on("click", function () {
+            $.post('https://cuneiphrase.xyz/addlink.php', {
+                link: 'https://www.w3schools.com/tags/tag_button.asp',
+                title: 'Tag button usage'
+            });
+        });
     });
 
 
