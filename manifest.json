@@ -9,9 +9,10 @@
   "content_scripts": [
     {
       "matches": [
-        "*://*.mozilla.org/*"
+        "*://*/*"
       ],
       "js": [
+        "/js/jquery.js",
         "/js/main.js"
       ]
     }
