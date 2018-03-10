@@ -1,0 +1,7 @@
+body {
+    background-image: url(backgroundTop.png);
+    background-repeat: repeat-x;
+    padding: 50px;
+    font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
+    color: #000014;
+}

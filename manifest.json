@@ -10,11 +10,21 @@
     {
       "matches": [
         "*://*/*"
-      ],
-      "js": [
-        "/js/jquery.js",
-        "/js/main.js"
       ]
     }
+  ],
+  "page_action": {
+    "default_icon": "icons/CuneiPhrase-48.png",
+    "browser_style": true,
+    "default_title": "CuneiPhrase",
+    "default_popup": "popup/main.html"
+  },
+  "background": {
+    "scripts": [
+      "/js/background.js"
+    ]
+  },
+  "permissions": [
+    "tabs"
   ]
 }
