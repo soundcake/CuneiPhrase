@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "CuneiPhrase",
+  "version": "1.0",
+  "description": "Provides links to relevant scientific docs as you read a news article",
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.mozilla.org/*"
+      ],
+      "js": [
+        "/js/main.js"
+      ]
+    }
+  ]
+}
