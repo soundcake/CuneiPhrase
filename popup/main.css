@@ -4,4 +4,17 @@ body {
     padding: 50px;
     font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
     color: #000014;
+    overflow-x: hidden;
+}
+
+iframe {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: 800px;
+    height: 700px;
+    padding: 10px;
+    display: block;
+    float: left;
+    clear: both;
+    margin: auto;
 }

@@ -23,8 +23,7 @@ $(document).ready(function () {
         $('<iframe />', {
             src: 'https://cuneiphrase.xyz/popup.php?url=' + currentTabUrl,
             id: 'myFrame',
-            frameborder: 0,
-            scrolling: 'no'
+            frameborder: 0
         }).appendTo('#main_div');
     });
 
