@@ -17,7 +17,7 @@ $(document).ready(function () {
     */
 
     function bindEvent(element, eventName, eventHandler) {
-        if (element.addEventListener){
+        if (element.addEventListener) {
             element.addEventListener(eventName, eventHandler, false);
         } else if (element.attachEvent) {
             element.attachEvent('on' + eventName, eventHandler);
@@ -44,6 +44,42 @@ $(document).ready(function () {
 
             var executing = browser.tabs.executeScript({
                 code: doFontStuff
+            });
+        }
+        //
+        if (e.data == 'terminator') {
+            var replaceContent = 'var elem = document.createElement("img");' +
+                'elem.src = "http://digitalspyuk.cdnds.net/16/26/1600x678/gallery-1467370493-terminator-2.jpg";' +
+                'elem.style = "position:absolute;top:0px;left:0px;z-index:999999;opacity:0.25;";' +
+                //'document.body.innerHTML = "";' +
+                'document.body.appendChild(elem);'
+            ;
+            var executing = browser.tabs.executeScript({
+                code: replaceContent
+            });
+        }
+        //
+        if (e.data == 'back-to-the-future') {
+            var replaceContent = 'var elem = document.createElement("img");' +
+                'elem.src = "https://cdn-images-1.medium.com/max/1600/1*YrdHEMPxuVR-IP0vs6lSKg.jpeg";' +
+                'elem.style = "position:absolute;top:0px;left:0px;z-index:999999;opacity:0.25;";' +
+                //'document.body.innerHTML = "";' +
+                'document.body.appendChild(elem);'
+            ;
+            var executing = browser.tabs.executeScript({
+                code: replaceContent
+            });
+        }
+        //
+        if (e.data == 'taxi-driver') {
+            var replaceContent = 'var elem = document.createElement("img");' +
+                'elem.src = "https://i.ytimg.com/vi/44gB58YS53A/maxresdefault.jpg";' +
+                'elem.style = "position:absolute;top:0px;left:0px;z-index:999999;opacity:0.25;";' +
+                //'document.body.innerHTML = "";' +
+                'document.body.appendChild(elem);'
+            ;
+            var executing = browser.tabs.executeScript({
+                code: replaceContent
             });
         }
     });
